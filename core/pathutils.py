@@ -8,9 +8,7 @@ def is_empty(folder: Path) -> bool:
     return len(list(folder.glob("*"))) == 0
 
 
-def create_project(folder: Path,
-                   is_init: bool,
-                   forced: bool = False) -> tuple[bool, str]:
+def create_project(folder: Path, forced: bool = False) -> tuple[bool, str]:
     if folder.is_file():
         return True, "The current folder is a file. (?)"
 
