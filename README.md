@@ -8,17 +8,14 @@ This project creates a folder system for a Flask application, which is useful wh
 ├── app/
 │   ├── __init__.py
 │   ├── settings.py
-│   └── routes/
-│       ├── api/
-│       │   ├── __init__.py
-│       │   └── routes.py
-│       │
-│       ├── site/
-│       │   ├── __init__.py
-│       │   └── routes.py
-│       ├── __init__.py
-│       └── error_handler.py
-├── .env
+│   ├── routes/
+│   │   ├── api/
+│   │   │   ├── __init__.py
+│   │   │   └── routes.py
+│   │   └── __init__.py
+│   └── cache/
+│       └── __init__.py
+├── .env.example
 ├── .gitignore
 ├── main.py
 └── requirements.txt
@@ -26,26 +23,27 @@ This project creates a folder system for a Flask application, which is useful wh
 
 ## Structure Description
 
-- `app/` Directory
-   - **__init__.py:** This file indicates that the 'app' directory should be treated as a Python package.
-   - **settings.py:** Configuration settings for the application.
-   - **routes/:** A subdirectory containing modules related to routing.
-      - **api/:**
-         - **__init__.py:** Marks the 'api' directory as a Python package.
-         - **routes.py:** Defines API-specific routes.
-      - **site/:**
-         - **__init__.py:** Marks the 'site' directory as a Python package.
-         - **routes.py:** Contains routes for the main site.
-      - **__init__.py:** Marks the 'routes' directory as a Python package.
-      - **error_handler.py:** Handles errors for the routes.
+-  `app/` Directory
 
-- `.env`: Configuration file used to store environment variables for the application.
+   -  \***\*init**.py:\*\* This file indicates that the 'app' directory should be treated as a Python package.
+   -  **settings.py:** Configuration settings for the application.
+   -  **routes/:** A subdirectory containing modules related to routing.
+      -  **api/:**
+         -  \***\*init**.py:\*\* Marks the 'api' directory as a Python package.
+         -  **routes.py:** Defines API-specific routes.
+      -  **site/:**
+         -  \***\*init**.py:\*\* Marks the 'site' directory as a Python package.
+         -  **routes.py:** Contains routes for the main site.
+      -  \***\*init**.py:\*\* Marks the 'routes' directory as a Python package.
+      -  **error_handler.py:** Handles errors for the routes.
 
-- `.gitignore`: Specifies files and directories that should be ignored by version control.
+-  `.env`: Configuration file used to store environment variables for the application.
 
-- `main.py`: The main entry point for the application.
+-  `.gitignore`: Specifies files and directories that should be ignored by version control.
 
-- `requirements.txt`: Lists the dependencies and their versions required for the project.
+-  `main.py`: The main entry point for the application.
+
+-  `requirements.txt`: Lists the dependencies and their versions required for the project.
 
 ## Installation
 
