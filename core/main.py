@@ -16,12 +16,6 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "--routes",
-    help="Routes to be included. The options are: site, api",
-    nargs="+"
-)
-
-parser.add_argument(
     "--force",
     help="Force an action. Be careful",
     action="store_true",
@@ -36,7 +30,7 @@ def main():
         if args.init else Path(".").joinpath(args.name).resolve()
     )
 
-    error, message = create_project(ACTUAL_DIR, args.init, args.force)
+    error, message = create_project(ACTUAL_DIR, args.force)
 
     if not error:
         print("App started successfully.")
