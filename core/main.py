@@ -38,5 +38,3 @@ def main():
     else:
         print(f"Error: {message}")
         exit(1)
-
-    print(args)
